@@ -12,22 +12,23 @@ type
     Layout1: TLayout;
     gradienteFundo: TRectangle;
     Layout2: TLayout;
-    Layout3: TLayout;
-    Layout4: TLayout;
-    Image1: TImage;
-    Layout5: TLayout;
     Layout6: TLayout;
     Layout7: TLayout;
     RoundRect1: TRoundRect;
     Layout8: TLayout;
     RoundRect2: TRoundRect;
-    Edit1: TEdit;
+    edtUsuario: TEdit;
     StyleBook1: TStyleBook;
     RoundRect3: TRoundRect;
-    Edit2: TEdit;
-    SpeedButton1: TSpeedButton;
+    edtSenha: TEdit;
+    btnLogin: TSpeedButton;
+    Layout4: TLayout;
+    Image1: TImage;
+    procedure btnLoginClick(Sender: TObject);
   private
     { Private declarations }
+     procedure Mobile;
+
   public
     { Public declarations }
   end;
@@ -38,7 +39,33 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UnitCadastromobile;
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.XLgXhdpiTb.fmx ANDROID}
 
+procedure TfrmPrincipalMobile.btnLoginClick(Sender: TObject);
+  begin
+  if Trim(edtUsuario.Text) = '' then
+    begin
+      MessageDlg('Preencha o Usuário!', TMsgDlgType.mtInformation, fmx.Dialogs.mbOKCancel, 0);
+      edtUsuario.SetFocus;
+      exit
+    end;
+
+  if Trim(edtSenha.Text) = '' then
+    begin
+      MessageDlg('preencha a senha', TMsgDlgType.mtInformation, FMX.Dialogs.mbOKCancel, 0);
+      edtSenha.SetFocus;
+      exit
+    end;
+
+    Mobile;
+  end;
+
+procedure TfrmPrincipalMobile.Mobile;
+  begin
+    frmCadastroMobile:= TfrmCadastroMobile.Create(frmPrincipalMobile);
+    frmCadastroMobile.ShowModal;
+  end;
 end.
