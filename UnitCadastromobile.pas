@@ -15,9 +15,14 @@ type
     ImageList1: TImageList;
     StyleBook1: TStyleBook;
     btnDeletar: TButton;
-    btnSair: TButton;
     Layout1: TLayout;
     ListBox1: TListBox;
+    Panel2: TPanel;
+    btnSair: TButton;
+    lblVendas: TLabel;
+    ListBoxItem1: TListBoxItem;
+    ListBoxItem2: TListBoxItem;
+    ListBoxItem3: TListBoxItem;
   private
     { Private declarations }
   public
