@@ -22,7 +22,6 @@ type
     lblVendas: TLabel;
     ListBoxItem1: TListBoxItem;
     ListBoxItem2: TListBoxItem;
-    ListBoxItem3: TListBoxItem;
   private
     { Private declarations }
   public
@@ -37,5 +36,7 @@ implementation
 {$R *.fmx}
 
 uses MobileUnit2;
+
+{ TfrmCadastroMobile }
 
 end.

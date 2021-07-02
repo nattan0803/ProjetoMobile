@@ -2,6 +2,36 @@
 Coordinates=116,10,55,36
 
 []
-Coordinates=10,10,96,58
+Coordinates=270,111,89,36
 Visible=True
+
+[btnInserir]
+Coordinates=158,1,69,58
+
+[Layout1]
+Coordinates=70,231,60,36
+
+[btnSair]
+Coordinates=158,155,55,58
+
+[ListBox1]
+Coordinates=0,0,139,212
+
+[ImageList1]
+Coordinates=270,1,77,36
+
+[Panel2]
+Coordinates=11,231,55,36
+
+[StyleBook1]
+Coordinates=270,56,80,36
+
+[lblVendas]
+Coordinates=139,231,71,58
+
+[btnDeletar]
+Coordinates=158,78,74,58
+
+[ListBoxItem1]
+Coordinates=270,166,89,36
 
